@@ -23,8 +23,11 @@ npm i alphavantage
  *
  * @param {String} key
  *   Your Alpha Vantage API key.
+ * @param {Object} requestOpts
+ *   OPTIONAL. Request options to customize the request, e.g.: timeout
+ *   Check https://github.com/request/request#requestoptions-callback for more info.
  */
-const alpha = require('alphavantage')({ key: 'qweqweqwe' });
+const alpha = require('alphavantage')({ key: 'qweqweqwe', requestOpts: {} });
 
 // Simple examples
 alpha.data.intraday(`msft`).then(data => {
